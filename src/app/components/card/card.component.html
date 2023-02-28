@@ -1,0 +1,12 @@
+<div class="card m-3">
+    <img [src]="personaje.image" class="card-img-top" alt="imagen del personaje {{personaje.name}}">
+    <div class="card-body">
+        <h5 class="card-title"> {{personaje.name}} </h5>
+        <p class="card-text"> {{personaje.species}} </p>
+        <a href="#" class="btn btn-primary" [ngClass]="{
+            'btn-danger': personaje.status === 'Dead',
+            'btn-success': personaje.status === 'Alive',
+            'btn-warning': personaje.status === 'unknown'
+        }" > {{personaje.status}} </a>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="container ">
+    <h1>My First Angular App</h1>
+    <hr>
+    <label for="inputCharacters">Personajes</label>
+    <input id="inputCharacters" (input)="filter($event)" type="text" class="form-control" placeholder="Rick" />
+
+    <hr>
+
+    <div class="row">
+        <div *ngFor="let personaje of personajes" class="col-xl-4 col-sm-6 col-xs-12">
+
+            <app-card [personaje]="personaje"></app-card>
+
+        </div>
+    </div>
+
+</div>
